@@ -1,38 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: linear-gradient(to right, rgb(7, 165, 165), rgb(2, 2, 75));
+}
+
+@font-face {
+    font-family: 'sega';
+    src: local('sega'), url('./fonts/sega.TTF') format('truetype');
+}
+
 .App {
-  text-align: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: linear-gradient(to right, rgb(7, 165, 165), rgb(2, 2, 75));
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* .robots {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+
+.robots {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.robot {
+    background-color: rgb(168, 227, 230);
+    width: 20%;
+    height: 350px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.App-header h1 {
+    color: aqua;
+    font-family: sega;
+    margin: 20px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input {
+    background: rgb(168, 227, 230);
+    margin: 0 0 20px 0;
+    height: 35px;
+    padding: 5px;
 }
