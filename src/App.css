@@ -19,15 +19,6 @@ body {
     background: linear-gradient(to right, rgb(7, 165, 165), rgb(2, 2, 75));
 }
 
-/* .robots {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-} */
-
 .robots {
     display: flex;
     flex-wrap: wrap;
@@ -52,6 +43,10 @@ body {
     color: aqua;
     font-family: sega;
     margin: 20px;
+}
+
+.robot:hover {
+    background: orange;
 }
 
 input {
