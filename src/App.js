@@ -1,18 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import RobotCard from './RobotCard';
+import RobotPopup from './RobotPopup';
 
 const API_URL = 'https://jsonplaceholder.typicode.com/users';
 
 function App() {
   const [robots, setRobots] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
+  const [selectedRobot, setSelectedRobot] = useState(null);
 
   const fetchRobots = async () => {
     const response = await fetch(API_URL);
     const data = await response.json();
     setRobots(data);
-  
   };
 
   const filterRobots = () => {
@@ -22,6 +23,14 @@ function App() {
     return robots.filter((robot) =>
       robot.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
+  };
+
+  const openPopup = (robot) => {
+    setSelectedRobot(robot);
+  };
+
+  const closePopup = () => {
+    setSelectedRobot(null);
   };
 
   useEffect(() => {
@@ -40,13 +49,18 @@ function App() {
       </header>
       <div className="robots">
         {filterRobots().length > 0 ? (
-          filterRobots().map((robot) => <RobotCard robot={robot} />)
+          filterRobots().map((robot) => (
+            <RobotCard key={robot.id} robot={robot} openPopup={openPopup} />
+          ))
         ) : (
           <div className="empty">
             <h2>Pas de robot trouvé</h2>
           </div>
         )}
       </div>
+      {selectedRobot && (
+        <RobotPopup robot={selectedRobot} closePopup={closePopup} />
+      )}
     </div>
   );
 }

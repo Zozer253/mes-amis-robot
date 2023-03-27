@@ -55,3 +55,98 @@ input {
     height: 35px;
     padding: 5px;
 }
+
+.robot img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+  
+
+@media only screen and (max-width: 768px) {
+    .robots {
+      max-width: 600px;
+    }
+    
+    .robot {
+      width: 30%;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .robots {
+      max-width: 300px;
+    }
+    
+    .robot {
+      width: 45%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .App-header h1 {
+      font-size: 1.5rem;
+    }
+    .robot h2 {
+      font-size: 1rem;
+    }
+    .robot span {
+      font-size: 0.8rem;
+    }
+  }
+
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup_inner {
+    background: linear-gradient(to right, rgb(7, 165, 165), rgb(2, 2, 75));
+    width: 500px;
+    height: 350px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .popup_inner img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .popup_inner h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .popup_inner p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .popup_inner button {
+    background-color: rgb(7, 165, 165);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  
+  
